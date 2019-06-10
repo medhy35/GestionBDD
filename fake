@@ -1,0 +1,90 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+      //  System.out.println("Hello World!");
+        boolean arret = false;
+       
+        Scanner sc = new Scanner(System.in);
+        
+    	while(!arret) {
+    		menu();
+        
+        int menu = sc.nextInt();
+        switch (menu) {
+		case 1:
+			menuRealisateur();
+			break;
+		case 2:
+			menuFilm();
+			break;
+		case 3:
+			menuPays();	
+			break;
+		case 9:
+			arret = true;	
+			System.out.print("Bye Bye!");
+			break;
+
+		default:
+			System.out.println("caseNan");	
+			break;
+			
+		}
+        
+    	}
+      
+    }
+
+	private static void menu() {
+		// TODO Auto-generated method stub
+		System.out.println("--         Mon Menu          --");
+        System.out.println("-- Gestion de Base de donnée --");
+        System.out.println("         1- Réalisateur        ");
+        System.out.println("            2- Film            ");
+        System.out.println("            3- Pays            ");
+        System.out.println("        Quitter: taper 9        ");
+        System.out.println("-------------------------------");
+        System.out.println(" Choisir un nombre :");
+		
+	}
+	private static void menuRealisateur() {
+		// TODO Auto-generated method stub
+		System.out.println("-- Gestion de base de donnée --");
+        System.out.println("--     Menu Réalisatieur     --");
+        System.out.println("           1- Liste            ");
+        System.out.println("           2- Ajout            ");
+        System.out.println("         2- Suppresion         ");
+        System.out.println("        3- Modification        ");
+        System.out.println("        Quitter: taper 9       ");
+        System.out.println("-------------------------------");
+        System.out.println(" Choisir un nombre :");
+		
+	}
+	private static void menuFilm() {
+		// TODO Auto-generated method stub
+		System.out.println("-- Gestion de base de donnée --");
+        System.out.println("--          Menu Film        --");
+        System.out.println("           1- Liste            ");
+        System.out.println("           2- Ajout            ");
+        System.out.println("         3- Suppresion         ");
+        System.out.println("        4- Modification        ");
+        System.out.println("        Quitter: taper 9       ");
+        System.out.println("-------------------------------");
+        System.out.println(" Choisir un nombre :");	
+	}
+	private static void menuPays() {
+		// TODO Auto-generated method stub
+		System.out.println("-- Gestion de base de donnée --");
+        System.out.println("--          Menu Pays        --");
+        System.out.println("           1- Liste            ");
+        System.out.println("           2- Ajout            ");
+        System.out.println("         3- Suppresion         ");
+        System.out.println("        4- Modification        ");
+        System.out.println("        Quitter: taper 9       ");
+        System.out.println("-------------------------------");
+        System.out.println(" Choisir un nombre :");	
+	}
+	
+}
