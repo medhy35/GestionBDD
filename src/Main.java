@@ -1,5 +1,6 @@
 import DAO.Film;
 import DAO.Personne;
+import DAO.RechercheFilm;
 import Database.Connexion;
 
 import java.io.File;
@@ -23,9 +24,20 @@ public class Main {
             else {
             System.out.println("fake");}*/
 
-        Connexion connexion = new Connexion(dbpath);
-        connexion.connect();
+       // Connexion connexion = new Connexion(dbpath);
+       // connexion.connect();
+
+
+        RechercheFilm recherche = new RechercheFilm(dbpath);
+                recherche.retrouve("abc");
+
+
+        recherche.fermeBase();
+
+
 /*
+
+
 
         ResultSet resultSet = connexion.query("SELECT * FROM films");
 
@@ -50,7 +62,7 @@ public class Main {
         System.out.println(idPersonne);*/
 
 
-        ResultSet lastIndex = connexion.query("SELECT id_film FROM films ORDER BY id_film DESC LIMIT 1");
+    /*    ResultSet lastIndex = connexion.query("SELECT id_film FROM films ORDER BY id_film DESC LIMIT 1");
         int idfilm =  Integer.parseInt(lastIndex.getString("id_film"))+1;
 
         Film film = new Film(idfilm,"Coup de foudre à Laval","fr",2019,105);
@@ -58,7 +70,7 @@ public class Main {
 
 
 
-        connexion.close();
+        connexion.close(); */
 
     }
 }
